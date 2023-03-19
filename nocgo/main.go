@@ -89,12 +89,6 @@ func main() {
 	}
 
 	for i := 0; i < 1000; i++ {
-		//		time.Sleep(1 * time.Millisecond)
-		//		db, err := New()
-		//		if err != nil {
-		//			panic(err)
-		//		}
-
 		err = db.Save(
 			fmt.Sprintf("sender %d %v", i, randomString()),
 			fmt.Sprintf("body %d %v", i, randomString()),
