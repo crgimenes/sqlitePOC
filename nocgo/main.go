@@ -12,6 +12,8 @@ import (
 // var connectionString = `file:database.db?cache=shared&mode=rwc&_journal_mode=WAL&_busy_timeout=1000000`
 var connectionString = "database.db"
 
+// var connectionString = ":memory:"
+
 type Database struct {
 	db *sqlx.DB
 }
@@ -98,6 +100,13 @@ func main() {
 		}
 
 	}
+
+	var name string
+	err = db.db.Get(&name, "SELECT name FROM sqlite_master  WHERE type = 'table' AND name = 'sqlite_stat1';")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(name)
 
 	//db.db.Close()
 
