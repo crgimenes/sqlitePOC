@@ -7,7 +7,6 @@ char *random_string() {
     const char charset[] =
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const int charset_len = sizeof(charset) - 1;
-    srand(time(NULL));
     for (int i = 0; i < 10; ++i) {
         str[i] = charset[rand() % charset_len];
     }
@@ -16,6 +15,8 @@ char *random_string() {
 }
 
 int main(int argc, char **argv) {
+    srand(time(NULL));
+
     FILE *fp;
     fp = fopen("file.txt", "a");
     if (fp == NULL) {
