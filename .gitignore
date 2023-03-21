@@ -1,0 +1,3 @@
+*.db
+nocgo/sqlite_nocgo
+cgo/sqlite_cgo
