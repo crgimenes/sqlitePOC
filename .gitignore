@@ -4,4 +4,6 @@ cgo/sqlite_cgo
 c/sqlite_local
 c/sqlite_amalg
 notes.txt
+c/raw_line_append/file.txt
+c/raw_line_append/raw_append
 
