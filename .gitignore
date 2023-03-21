@@ -1,5 +1,7 @@
 *.db
 nocgo/sqlite_nocgo
 cgo/sqlite_cgo
+c/sqlite_local
+c/sqlite_amalg
 notes.txt
 
